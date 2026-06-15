@@ -1,4 +1,4 @@
-# [ACESSAR SITE](https://jplisboa008.github.io/site-devil-may-cry/pages/armas.html)
+[# [ACESSAR SITE](https://jplisboa008.github.io/site-devil-may-cry/index.html)
 
 Projeto desenvolvido na disciplina de Introdução à Tecnologia Web
 1° Periodo do curso de Sistemas de Informação

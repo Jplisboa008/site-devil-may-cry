@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #050505, #111);
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    width: 100%;
+    padding: 25px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 2px solid #8b0000;
+
+    z-index: 1000;
+}
+
+.logo_area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 3px solid #ff0000;
+
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+
+    background-color: #111;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+header h1 {
+    font-size: 38px;
+
+    color: #ff2a2a;
+
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    position: relative;
+
+    transition: 0.3s;
+}
+
+nav ul li a::after {
+    content: '';
+
+    width: 0%;
+    height: 2px;
+
+    background: #ff0000;
+
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff3b3b;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider{
+    display: flex;
+
+    width: 300%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: transform 1s ease-in-out;
+}
+
+.slider img{
+    width: 100vw;
+    height: 100vh;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+}
+
+.slider::after{
+    content: '';
+
+    position: absolute;
+    inset: 0;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.6),
+    rgba(0,0,0,0.85));
+}
+
+.banner_content{
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+.banner h2 {
+    font-size: 70px;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+
+    text-shadow: 0 0 25px rgba(255, 0, 0, 0.8);
+}
+
+.banner p {
+    max-width: 850px;
+
+    font-size: 22px;
+    line-height: 1.7;
+
+    color: #ddd;
+
+    margin-bottom: 40px;
+}
+
+.btn {
+    padding: 16px 40px;
+
+    background: linear-gradient(45deg, #8b0000, #ff0000);
+
+    color: white;
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+
+    transition: 0.4s;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+
+    box-shadow: 0 0 30px rgba(255, 0, 0, 1);
+
+    background: linear-gradient(45deg, #ff0000, #ff3c3c);
+}
+
+.page_banner {
+    width: 100%;
+    height: 45vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+        url('../imagens/dmc_banner.jpg');
+
+    background-size: cover;
+    background-position: center;
+}
+
+.page_banner h2 {
+    font-size: 55px;
+
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+}
+
+.character_card,
+.game_card,
+.weapon_card,
+.series_card,
+.history_card {
+    width: 85%;
+
+    margin: 60px auto;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.15);
+}
+
+.character_card img,
+.game_card img,
+.weapon_card img,
+.series_card img,
+.history_card img {
+    width: 350px;
+
+    border-radius: 15px;
+
+    object-fit: cover;
+}
+
+.character_text,
+.game_text,
+.weapon_text,
+.series_text,
+.history_text {
+    flex: 1;
+}
+
+.character_text h2,
+.game_text h2,
+.weapon_text h2,
+.series_text h2,
+.history_text h2 {
+    font-size: 35px;
+
+    margin-bottom: 20px;
+
+    color: #ff3b3b;
+}
+
+.character_text p,
+.game_text p,
+.weapon_text p,
+.series_text p,
+.history_text p {
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #ddd;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+footer {
+    background: #050505;
+
+    text-align: center;
+
+    padding: 25px;
+
+    border-top: 2px solid #8b0000;
+
+    color: #aaa;
+}
+
+.menu_mobile {
+    display: none;
+
+    flex-direction: column;
+    gap: 6px;
+
+    cursor: pointer;
+}
+
+.menu_mobile .line {
+    width: 30px;
+    height: 3px;
+
+    background-color: white;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+@media(max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu_mobile {
+        display: flex;
+    }
+
+    nav {
+        position: absolute;
+
+        top: 120px;
+        right: -100%;
+
+        width: 250px;
+        height: 320px;
+
+        background: rgba(0, 0, 0, 0.95);
+
+        backdrop-filter: blur(10px);
+
+        border-left: 2px solid #8b0000;
+
+        transition: 0.5s;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+
+        padding: 40px;
+    }
+
+    nav ul li {
+        margin-bottom: 20px;
+    }
+
+    .banner h2 {
+        font-size: 45px;
+    }
+
+    .banner p {
+        font-size: 18px;
+    }
+
+    .page_banner h2 {
+        font-size: 40px;
+    }
+
+    .character_card,
+    .game_card,
+    .weapon_card,
+    .series_card,
+    .history_card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .character_card img,
+    .game_card img,
+    .weapon_card img,
+    .series_card img,
+    .history_card img {
+        width: 100%;
+    }
+
+    .character_card,
+    .game_card,
+    .weapon_card,
+    .series_card {
+
+        opacity: 0;
+
+        transform: translateY(80px);
+
+        transition: 1s;
+    }
+
+    .show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.character_card img {
+    width: 300px;
+    height: 400px;
+    object-fit: contain; 
+    background-color: transparent; 
+    border-radius: 15px;
+}
+.banner{ 
+    transition: background-image 1s ease; }
+
